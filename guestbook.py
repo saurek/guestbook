@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -10,7 +10,8 @@ def index():
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-    return '<h1>This is a home page</h1>'
+    links = ['https://google.com', 'https://www.shodan.io/', 'https://meduza.io/en', 'https://informnapalm.org/en/']
+    return render_template('example.html', zevar='', links=links)
 
 
 if __name__ == '__main__':

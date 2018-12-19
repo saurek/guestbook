@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example template</title>
+</head>
+<body>
+{% if zevar %}
+    <h1>Variabele passed: {{ zevar }}</h1>
+{% else %}
+    <h1>Nothing passed</h1>
+{% endif %}
+    <h1>Example template</h1>
+    <p>Derp derp</p>
+    <a href="https://www.defenseone.com/">Link to def one</a>
+{% for link in links %}
+    <a href="{{ link }}">Link</a> </br>
+{% endfor %}
+    <h3>Ze end</h3>
+</body>
+</html>
